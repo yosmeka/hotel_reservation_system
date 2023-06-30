@@ -1,0 +1,951 @@
+@font-face {
+    font-family: roboto;
+    src: url(Roboto-Regular.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: roboto;
+    background-color: rgb(247, 246, 246); 
+    color:black;
+}
+p{
+    padding: 10px;
+}
+.tcontainer{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+ }
+
+nav{
+    background-color: black;
+    display:flex;
+    min-height: 3vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center;
+    position: fixed;
+    min-width: 100%;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+nav li,a{
+    display: inline-block;
+    padding: 0.7rem;
+    font-size: 1.05em;
+    color: white;
+    text-decoration: none;
+}
+nav a:hover{
+    color: rgb(70, 250, 70);
+    transform:scale(1.05);
+    transition-duration: 1s;
+    background-color: gray;
+    cursor: pointer;
+}
+#bkcapital {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-text {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    color: black;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    color: black;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-menu li {
+    padding: 10px;
+    color: black;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  .dropdown-menu li a{
+    color: black;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-icon {
+    margin-left: 5px;
+  }
+  
+#logo-name{
+    padding: 0.5rem;
+    padding-left: 2em;
+    font-size: 1.5em;
+    color: rgb(46, 241, 46);
+}
+#home-sec{
+    display: block;
+    justify-content: center;
+    height:90vh;
+    text-align: center;
+    padding-top:20vh;
+}
+#home-sec h1{
+    position: relative;
+    color: white;
+    font-size: 4rem;
+    width: 100%;
+    margin:1rem;
+    margin-top: 90px;
+    margin-bottom: 0;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#home-sec h2{
+    position: relative;
+    color: white;
+    font-size: 1.4rem;
+    width: 100%;
+    margin-top:0.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#hcontainer-1{
+    background-image: url('Assets/webp.jpg');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+#search{
+    width:800px;
+    height: 10%;
+    border-radius: 40px;
+    border: none;
+    padding:20px;   
+    font-size: 1rem;
+}
+#search-button{
+    width: 100px;
+    height:10%;
+    border-radius:40px;
+    border: none;
+    background-color: rgb(14, 247, 14);
+    color:white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#search-button:hover{
+    background-color: black;
+}
+#hcontainer-2{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+#hcontainer-2 .hbox{
+    display: flex;
+    align-items: center;
+    border: none;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 60px;
+    box-shadow: 20px 20px rgb(202, 195, 181);
+} 
+.hcontainer-3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 100vh;
+  margin: 5vw;
+  background-color: white;
+}
+
+.slider {
+  width: 70%;
+  height: 500px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.slider .slick-dots {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slider .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slider .slick-dots li button {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider .slick-dots li.slick-active button {
+  background-color: #333;
+}
+
+.slider .icon-box {
+  width: 800px;
+  height: 500px;
+  box-shadow: 0px 0px 100px rgb(206, 210, 211);
+  border-radius: 40px;
+  background: hsla(33, 100%, 53%, 1);
+
+background: linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF930F", endColorstr="#FFF95B", GradientType=1 );
+}
+
+.icon-box:hover {
+  background-color: greenyellow;
+  color: white;
+}
+.icon-box img{
+  margin-left: 40%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transition: 0.3s ease;
+}
+.icon-box img:hover{
+  color: #fff;
+  transform: scale(1.2);
+}
+.icon-box h2{
+  text-align: center;
+  color: black;
+}
+.icon-box p{
+  text-align: center;
+  color: black;
+}
+#hcontainer-3-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hcontainer-3-header {
+  color: rgb(14, 247, 14);
+  font-size: 3em;
+}
+
+
+.hcontainer-4{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background-color: white;
+}
+.hcontainer-4 .hbox-4{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 60px;
+    justify-content: center;
+    border: none;
+    align-items: center ;
+   
+} 
+.hbox-4:nth-child(1){
+    border-radius: 250px;
+    background-image: url('Assets/contact1.avif');
+    background-size: cover;
+}
+.hbox-4:nth-child(2) h2{
+    font-size: 2.5em;
+    color: rgb(46, 241, 46); 
+}
+#hcontainer-4-contact{
+    color: black;
+    font-size: 2em;
+    text-decoration: underline;
+}
+#hcontainer-4-contact:hover{
+    background-color: gray;
+    color: black;
+}
+#contact-us-list{
+    margin-top: 2em;
+    list-style-type: none;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    gap:1px;
+}
+.fcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(0, 0, 17);
+    font-size: 1.2rem;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 35vh;
+}
+.fcontainer ul{
+    list-style-type: none; 
+}
+.fcontainer li{
+    margin-top:0.5em;
+}
+.fbox{
+    margin-top:1.5em;
+    margin-bottom:1.5em; 
+}
+.fbox:nth-child(1){
+    cursor: pointer;
+}
+.fbox:nth-child(1) li:hover{
+    transform: scale(1.05);
+    transform: translate(2px);
+}
+.fbox:nth-child(2){
+    align-self: center;
+}
+.fbox:nth-child(3){
+    margin: 1em;
+    list-style-type: none;
+}
+.fbox:nth-child(3) h3{
+    font-size: 1.4em;
+}
+.f-link{
+    display: flex;
+    justify-content: end;
+    padding: 1.5em;
+    min-height: 5vh;
+    color: white;
+    background-color: rgb(0, 0, 17);
+    border-top-color:1px solid white;
+}
+.f-link li{
+    margin-inline: 0.5em;
+    text-decoration: underline;
+    display: inline-block;
+    cursor: pointer;
+}
+#symbol-list{
+   --fa-li-margin:0;
+}
+.fa-icon{
+    margin-right: 1em;
+    font-size: 1rem;
+    color:white;
+}
+
+/*booking page*/
+
+#booking-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
+    min-width: 100%;
+    margin-top: 65px;
+    /* background-image: url(Assets/photo_2023-06-12_23-09-44.jpg); */
+    background-color: yellow;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20vh;
+}
+#booking-header-section h1{
+    font-size:4em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    margin-top: 50px;
+}
+#t-container2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+div,main,aside{
+  /*border: 1px solid black;*/
+}
+
+#label-h1{
+    padding-left: 2em;
+    font-size: 1.2em;
+}
+section {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .booking-main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .booking-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .booking-img-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .hotel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .booking-content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .book-link {
+    align-self: flex-end;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .book-link:hover {
+    background-color: #45a049;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+
+/*separate booking page*/
+
+input[type="date"]{
+    height: 35px;
+    padding:10px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: white;
+    color:white;
+    background-color: rgb(59, 59, 231);
+    border: none;
+    margin: 15x;
+}
+input[type="number"]{
+  height: 35px;
+  padding:10px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: white;
+  color:white;
+  background-color: rgb(59, 59, 231)  ;
+  border: none;
+  margin: 15x;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+input[type="date"]:hover{
+    background-color: rgb(26, 26, 168);
+    cursor: pointer;
+}
+input[type="number"]:hover{
+  background-color: rgb(26, 26, 168);
+  cursor: pointer;
+}
+.booking-form{
+    background-color: rgba(0, 0, 0, 0.486);
+    width:50vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 60vh;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border-radius: 5vh;
+}
+#room{
+    padding: 5px;
+    width: 200px;
+    height:35px;
+    border-color: rgb(59, 59, 231);  
+}
+#room:hover{
+   cursor: pointer;
+}
+#submit-button{
+    padding: 5px;
+    border-radius: 15px;
+    width: 60px;
+    height:35px;
+    background-color: rgb(59, 59, 231); 
+    color: white; 
+}
+#submit-button:hover{
+    background-color: rgb(34, 34, 187); 
+    cursor: pointer;
+}
+#date-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.date-container{
+    margin:15px;
+}
+.form-section{
+    display: absolute;
+    min-height: 60vh;
+    width: 50vw;
+    background-image: url('Assets/bookinghotel.jpg');
+    background-size: contain;
+    margin-top: 90px;
+    margin-inline: auto;
+    border-radius: 5vh;
+}
+.hpara{
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: -40px;
+  margin-left: 45%;
+  font-size: 30px;
+  font-weight: 400;
+}
+.hotel-section .hotel-section-1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.sec-1,
+.sec-2,
+.sec-3,
+.sec-4,
+.sec-5 {
+  background-size: cover;
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+
+/* Adjust the width and height values as needed */
+
+
+  
+  
+.hotel-section-2{
+    height: 40vh;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.booking-icons{
+    width:15vw;
+    margin:2vw;
+    height:10vh;
+}
+
+.main-container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: url(Assets/janita-sumeiko-ZK1WQDMQvik-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hh{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-right: 40px;
+    width: 100%;
+    color: #fff;
+}
+.ph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+ .main-container .formdiv{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+ }
+ .main-container .formdiv1{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+}
+.main-container label{
+    width: 100%;
+    color: black;
+    font-size: 25px;
+    text-align: left;
+    padding:.7rem;
+}
+.main-container input{
+    margin-left: 15px;
+    margin-right: 20px;
+    width: 90%;
+    margin-top: 10px;
+    border: none;
+    outline:none;
+    height: 50px;
+    border-radius: 15px;
+    background:black;
+    transition: all ease-out.2s;
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+}
+.main-container a{
+    text-decoration: none;
+    color: black;
+}
+.btnsubmit{
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: #fff;
+    font-weight: 400;
+    border: none;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.fontreg{
+    position: absolute;
+    margin-left: 1000px;
+}
+#adminheader {
+    background-color: black;
+    display: flex;
+    min-height: 3vh;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+  
+  .padmin {
+    color: white;
+    font-size: 1.05em;
+  }
+  
+  header li,
+  header a {
+    display: inline-block;
+    padding: 0.7rem;
+    font-size: 1.05em;
+    color: white;
+    text-decoration: none;
+  }
+  
+  #tabsection {
+    margin-top: 11vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .tabs{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    background-color: darkslategray;
+    justify-content: space-evenly;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+  }
+  .tabs .tab{
+    width: 100px;
+    height: 60px;
+    background-color: black;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:.6s ease all;
+    border: none;
+    outline:none!important;
+  }
+
+  .tabs .tab.active {
+    background-color: #fff;
+    color: black;
+  }
+  .tab-content{
+    display: block;
+    /* justify-content: center;
+    align-items: center; */
+    /* flex-wrap: wrap; */
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: black;
+    color: #fff;
+    transition:.6s ease all; 
+    width: 800px;
+    min-height: 90vh;
+  }
+  .tab-content label{
+    width: 100%;
+    margin-left: 50px;
+    color: white;
+    font-size: 25px;
+    text-align: left;
+    padding:.7rem;
+  }
+  .tab-content textarea{
+    width: 92%!important;
+    margin-left: 50px;
+    /* resize: vertical; */
+    overflow-y: scroll;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  .tab-content input[type="text"]{
+    width: 600px;
+    margin-left: 50px;
+    margin-top: 10px;
+    border: none;
+    outline:none;
+    height: 50px;
+    border-radius: 15px;
+    background:white;
+    transition: all ease-out.2s;
+    color: black;
+    padding: 10px;
+    font-size: 25px;
+  }
+  .tab-content input[type="number"]{
+    width: 100px;
+    margin-left: 50px;
+    margin-top: 10px;
+    border: none;
+    outline:none;
+    height: 50px;
+    border-radius: 15px;
+    background:white;
+    transition: all ease-out.2s;
+    color: black;
+    padding: 10px;
+    font-size: 25px;
+  }
+  .tab-content input[type="file"]{
+    border: 1px solid #ccc;
+    padding: 8px;
+    background-color: #f8f8f8;
+    color: #555;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+  }
+  .tab-content .imform{
+    position: absolute;
+    width: 100%;
+    margin-top: 350px;
+  }
+  .tab-content {
+    display: none;
+  }
+  .tab-content input{
+    display: none;
+  }
+  .tab-content label{
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  .tab-content input{
+    display: block;
+  }
+  .tab-content label{
+    display: block;
+  }
+  #btnsub{
+    background-color: #fff;
+    color: black;
+    margin-left: 50px;
+    font-size: 25px;
+    font-weight: 350;
+  }
+  #hid{
+    width: 100%;
+  }
+ .rooms{
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ }
+ .rooms .hroom{
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-left: 45%;
+ }
+  .rooms-list {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .room-container {
+    width: 400px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .room-img-container {
+    text-align: center;
+  }
+  
+  .room-img-container .hotel-img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .room-content-container {
+    margin-top: 10px;
+  }
+  
+  .room-content-container p {
+    margin: 5px 0;
+  }
+  
+  .room-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .room-link:hover {
+    background-color: #555;
+  }
+  
+  
